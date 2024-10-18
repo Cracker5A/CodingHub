@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    top: 0;
+    position: sticky;
+    transition: 0.4;
+    background: rgba(0, 0, 0, 0.7)url(../Images/wallpaper-hd-laptop.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.navbar{
+    margin: auto;
+}
+.logo img{
+    border: 5px solid white;
+    border-radius: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rightnav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rightnav li{
+    list-style-type: none;
+}
