@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="icon" href="/Images/Main.png">
-    <link rel="stylesheet" href="/CSS/main-style.css">
     <title>CodingHub - Login/Sign Up</title>
     <style>
         /* General Reset */
@@ -18,12 +16,13 @@
         body {
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background: url(/Images/wallpaper-hd-laptop.jpg) no-repeat center center/cover;
             overflow: hidden;
-            background-blend-mode: darken;
             background-size: cover;
+            background-blend-mode: darken;
         }
 
         .background-overlay {
@@ -35,6 +34,50 @@
             background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(8px);
             z-index: -1;
+        }
+
+        header {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar img {
+            border-radius: 5px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background: white;
+            color: black;
         }
 
         .container {
@@ -119,6 +162,8 @@
     </style>
 </head>
 <body>
+    <div class="background-overlay"></div>
+
     <header>
         <nav class="navbar">
             <a href="/index.html"><img src="/Images/Main.png" alt="logo" width="50px"></a>
@@ -130,13 +175,11 @@
                 <li><a href="/about.html">About</a></li>
             </ul>
             <ul class="login">
-                <li><a href="/user.html">Login/SingUp</a></li>  
+                <li><a href="/user.html">Login/SignUp</a></li>
             </ul>
         </nav>
-       
-        </nav>
-       </header>
-    <div class="background-overlay"></div>
+    </header>
+
     <div class="container">
         <div class="tabs">
             <span class="tab active" data-target="login">Login</span>
