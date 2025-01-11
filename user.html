@@ -21,8 +21,8 @@
             align-items: center;
             background: url(/Images/wallpaper-hd-laptop.jpg) no-repeat center center/cover;
             overflow: hidden;
-            background-size: cover;
             background-blend-mode: darken;
+            background-size: cover;
         }
 
         .background-overlay {
@@ -158,6 +158,59 @@
 
         .form a:hover {
             text-decoration: underline;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar ul li {
+                margin: 5px 0;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .tabs span {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .form input,
+            .form button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar img {
+                width: 40px;
+            }
+
+            .navbar ul li a {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .tabs span {
+                font-size: 12px;
+            }
+
+            .form input,
+            .form button {
+                font-size: 12px;
+                padding: 6px;
+            }
         }
     </style>
 </head>
