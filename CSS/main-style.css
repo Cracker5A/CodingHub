@@ -15,7 +15,7 @@ header {
     background-position: center;
     background-blend-mode: darken;
     top: 0;
-    position: sticky;
+    position: -webkit-sticky;
     padding: 10px 0;
     text-align: center;
     font-size: 20px;
