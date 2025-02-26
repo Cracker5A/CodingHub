@@ -70,189 +70,63 @@ header {
 
 }
 
-You said:
-   <li><a id="Courses" href="#courses">Courses</a>
-                    <ul class="cs">
-                        <li><a href="">Web Development</a></li>
-                        <li><a href="">Python</a></li>
-                        <li><a href="">C</a></li>
-                        <li><a href="">C++</a></li>
-                        <li><a href="">JAVA</a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                    </ul>
-                </li> create a CSS such that when i hover on courses it display submenu
-ChatGPT said:
-
-Here’s the CSS to make the submenu (ul.cs) appear when you hover over "Courses":
-
-/* Style for the main menu */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.navbar ul li a.active {
+    background-image: linear-gradient(31deg, #9f01ca 0%,#4a55ee 50%);
+    color: #fff;
+    border-radius: 10px;
 }
-
-li {
-    position: relative;
-    display: inline-block;
-}
-
-/* Style for the submenu */
-ul.cs {
-    display: none; /* Hide submenu by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    width: 150px;
-}
-
-ul.cs li {
-    display: block;
-    width: 100%;
-}
-
-ul.cs li a {
-    display: block;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-}
-
-/* Show submenu when hovering on the parent */
-li:hover > ul.cs {
-    display: block;
-}
-
-/* Hover effect on submenu items */
-ul.cs li a:hover {
-    background-color: #f0f0f0;
-}
-
-This will make the submenu appear when you hover over "Courses". Let me know if you need modifications! 🚀
-You said:
-dont target tags target class and ids
-ChatGPT said:
-
-Got it! Here’s your CSS, targeting classes and IDs instead of tags:
-
-/* Style for the main menu */
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-item {
-    position: relative;
-    display: inline-block;
-}
-
-/* Style for the submenu */
-.cs {
-    display: none; /* Hide submenu by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    width: 150px;
-}
-
-.cs .submenu-item {
-    display: block;
-    width: 100%;
-}
-
-.cs .submenu-link {
-    display: block;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-}
-
-/* Show submenu when hovering on the parent */
-#Courses:hover + .cs,
-.menu-item:hover > .cs {
-    display: block;
-}
-
-/* Hover effect on submenu items */
-.cs .submenu-link:hover {
-    background-color: #f0f0f0;
-}
-
-Update Your HTML to Match:
-
-<ul class="menu">
-    <li class="menu-item">
-        <a id="Courses" href="#courses">Courses</a>
-        <ul class="cs">
-            <li class="submenu-item"><a class="submenu-link" href="">Web Development</a></li>
-            <li class="submenu-item"><a class="submenu-link" href="">Python</a></li>
-            <li class="submenu-item"><a class="submenu-link" href="">C</a></li>
-            <li class="submenu-item"><a class="submenu-link" href="">C++</a></li>
-            <li class="submenu-item"><a class="submenu-link" href="">JAVA</a></li>
-        </ul>
-    </li>
-</ul>
-
-This will ensure the submenu appears when you hover over "Courses" while following your requirement of using classes and IDs. 🚀 Let me know if you need any tweaks!
-You said:
-there is no menu class i created look at html
-ChatGPT said:
-
-You're right! Based on your HTML, here’s the correct CSS that strictly follows your structure by only targeting your existing classes and IDs:
-Updated CSS
 
 /* Ensure the parent <li> is positioned properly */
-#Courses {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
+li {
+    position: relative;
 }
 
-/* Hide the submenu by default */
-.cs {
+/* Initially hide the submenu */
+ul.cs {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.253);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 150px;
+    width: 250px;
     padding: 0;
+    margin: 0; /* Remove any default margin */
+    z-index: 100; /* Ensure it stays above other elements */
 }
 
 /* Style submenu items */
-.cs li {
+ul.cs li {
     list-style: none;
 }
 
-.cs a {
+ul.cs a {
+    text-decoration: none;
     display: block;
     padding: 10px;
-    color: black;
+    color: rgb(0, 255, 42);
     text-decoration: none;
+    background: rgba(15, 15, 15, 0.589);
 }
 
-/* Show submenu when hovering over "Courses" */
-#Courses:hover + .cs,
-#Courses:focus + .cs,
-.cs:hover {
+/* Hide the submenu properly */
+ul.cs {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s;
+}
+
+/* Show submenu when hovering over the parent <li> */
+li:hover > ul.cs {
     display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
-
-
+/* Hover effect on submenu links */
+ul.cs a:hover {
+    background-color: #1eff00;
+}
 
 
 
