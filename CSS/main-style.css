@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5)url(/Images/wallpaper-hd-laptop.jpg);
+    margin: auto;
+    height: 100vh;
+    background-size: cover;
+    ;
+    background-blend-mode: darken;
+    top: 0;
+    position: -webkit-sticky;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial Narrow Bold';
+ transition: height 0.3s ease-in-out, margin 0.3s ease-in-out;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.navbar img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 3px white solid;
+    border-radius: 50%;
+}
+
+.navbar img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    padding: 0 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    padding: 5px 17px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar ul li a:hover {
+    background-image: linear-gradient(31deg, #9f01ca 0%, #4a55ee 50%);
+    color: #fff;
+    border-radius: 10px;
+
+}
+
+.navbar ul li a.active {
+    background-image: linear-gradient(31deg, #9f01ca 0%, #4a55ee 50%);
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Ensure the parent <li> is positioned properly */
+li {
+    position: relative;
+}
+
+/* Initially hide the submenu */
+ul.cs {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.253);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 0;
+    margin: 0;
+    /* Remove any default margin */
+    z-index: 100;
+    /* Ensure it stays above other elements */
+}
+
+/* Style submenu items */
+ul.cs li {
+    list-style: none;
+}
+
+ul.cs a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: rgb(0, 255, 42);
+    text-decoration: none;
+    background: rgba(15, 15, 15, 0.589);
+}
+
+/* Hide the submenu properly */
+ul.cs {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s;
+}
+
+/* Show submenu when hovering over the parent <li> */
+li:hover>ul.cs {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Hover effect on submenu links */
+ul.cs a:hover {
+    background-color: #1eff00;
+}
+
+
+
+footer {
+    background-image: linear-gradient(31deg, #b90cee 0%, #4a55ee 74%);
+    color: #fff;
+    text-align: center;
+    padding: 0px 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.footer-content li {
+    list-style: none;
+    display: inline-block;
+}
+
+.footer-content li a {
+    text-decoration: none;
+    color: #fff;
+    padding-right: 60px;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
