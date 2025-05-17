@@ -97,3 +97,18 @@ header {
     bottom: -5px;
     transition: all 0.3s ease-in-out;
 }
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+#courses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+
+
+}
